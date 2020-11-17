@@ -1,22 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+/* THIS IS THE VIEWS IMPORTS */
+import Home from './Views/Home';
+import AllMovies from './Views/AllMovies';
+import MovieDetail from './Views/MovieDetail';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/allmovies/:id" component={AllMovies} />
+        <Route path="/moviedetail/:id" component={MovieDetail} />
+      </Switch>
+
+    </Router >
   );
 }
 
