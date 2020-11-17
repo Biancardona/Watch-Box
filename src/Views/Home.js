@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import CategoriesDisplay from "../Components/CategoriesDisplay";
 // import '../Styles/Home.css';
 import NavBar from '../Components/Navbar';
 
@@ -12,6 +12,8 @@ const Home = () => (
         <header>
             <NavBar> </NavBar>
         </header>
+
+        <CategoriesDisplay />
 
         <Link key="avengers" to={`/allmovies/avengers`}>Avengers</Link><br>
         </br>
