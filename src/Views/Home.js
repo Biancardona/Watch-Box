@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import CategoriesDisplay from "../Components/CategoriesDisplay";
 // import '../Styles/Home.css';
 import NavBar from '../Components/Navbar';
@@ -13,9 +13,12 @@ const Home = () => (
             <NavBar> </NavBar>
         </header>
 
-        <CategoriesDisplay />
+        <CategoriesDisplay category={"avengers"} />
+        <CategoriesDisplay category={"star"} />
+        <CategoriesDisplay category={"harry"} />
+        <CategoriesDisplay category={"lord"} />
 
-        <Link key="avengers" to={`/allmovies/avengers`}>Avengers</Link><br>
+        {/* <Link key="avengers" to={`/allmovies/avengers`}>Avengers</Link><br>
         </br>
         <Link key="star" to={`/allmovies/star`}>Star Wars</Link><br>
         </br>
@@ -24,7 +27,7 @@ const Home = () => (
         <Link key="disney" to={`/allmovies/disney`}>Disney</Link><br>
         </br>
         <Link key="lord" to={`/allmovies/lord`}>Lord Of The Rings</Link><br>
-        </br>
+        </br> */}
     </div >
 );
 
