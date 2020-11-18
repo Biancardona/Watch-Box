@@ -1,8 +1,9 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import CategoriesDisplay from "../Components/CategoriesDisplay";
+import CategoriesDisplay from "../Components/CategoriesDisplay/CategoriesDisplay";
 // import '../Styles/Home.css';
 import NavBar from '../Components/Navbar';
+
 
 const Home = () => (
 
@@ -13,7 +14,8 @@ const Home = () => (
             <NavBar> </NavBar>
         </header>
 
-        <CategoriesDisplay category={"avengers"} />
+
+
         <CategoriesDisplay category={"star"} />
         <CategoriesDisplay category={"harry"} />
         <CategoriesDisplay category={"lord"} />
