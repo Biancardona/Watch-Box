@@ -29,7 +29,7 @@ export default function DataLoader({ match }) {
                                 <Card.Body className="cardTitle">
                                     <Card.Title>{el.Title}</Card.Title>
                                     <Card.Link to="/about/" href="/about/">Rent a Movie</Card.Link>
-                                    <Card.Link href="#">See movie Plot</Card.Link>
+                                    <Card.Link to={`/moviedetail/${el.imdbID}`} href={`/moviedetail/${el.imdbID}`}> See movie Plot</Card.Link>
                                 </Card.Body>
                             </Card>
                         </CardColumns>
