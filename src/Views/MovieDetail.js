@@ -1,37 +1,49 @@
 import React from 'react';
 import { PlotDetail } from '../Components/UseFetch';
+import NavBar from '../Components/Navbar';
 
 export default function MovieDetail({ imdbID }) {
-    const item = PlotDetail(imdbID);
-    return (
-        <div>
-            <h1>
-                Title:
+        const item = PlotDetail(imdbID);
+        return (
+                <>
+                        <div className="columns is-multiline">
+
+                                <div className="column"></div>
+                                <header>
+                                        <NavBar> </NavBar>
+                                </header>
+
+                                <div>
+                                        <h1>
+                                                Title:
         {' '}
-                {item.Title}
-                {' '}
-                <br />
+                                                {item.Title}
+                                                {' '}
+                                                <br />
         Runtime:
         {' '}
-                {item.Runtime}
-                <br />
+                                                {item.Runtime}
+                                                <br />
         Genre:
         {' '}
-                {item.Genre}
-                <br />
+                                                {item.Genre}
+                                                <br />
         Director:
         {' '}
-                {item.Director}
-                <br />
+                                                {item.Director}
+                                                <br />
         Actors:
         {' '}
-                {item.Actors}
-                <br />
+                                                {item.Actors}
+                                                <br />
         Plot:
         {' '}
-                {item.Plot}
-                <br />
-            </h1>
-        </div>
-    );
+                                                {item.Plot}
+                                                <br />
+                                        </h1>
+                                </div>
+                        </div>
+
+                </>
+        );
 }

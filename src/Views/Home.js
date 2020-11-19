@@ -16,9 +16,9 @@ const Home = () => (
 
 
 
-        <CategoriesDisplay category={"star"} />
-        <CategoriesDisplay category={"harry"} />
-        <CategoriesDisplay category={"lord"} />
+        <CategoriesDisplay category={"star"} worKey="star" />
+        <CategoriesDisplay category={"harry"} worKey="harry" />
+        <CategoriesDisplay category={"batman"} workey="batman" />
 
         {/* <Link key="avengers" to={`/allmovies/avengers`}>Avengers</Link><br>
         </br>
