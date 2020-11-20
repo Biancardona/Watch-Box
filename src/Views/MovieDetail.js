@@ -49,8 +49,8 @@ export default function MovieDetail({ match }) {
 
                                                         </Card.Title>
 
-                                                        <Card.Link href="#">Card Link</Card.Link>
-                                                        <Card.Link href="#">Another Link</Card.Link>
+                                                        <Card.Link to="/about/" href="/about/">Rent a Movie</Card.Link>
+
                                                 </Card.Body>
                                         </Card>
 

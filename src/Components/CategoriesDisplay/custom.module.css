@@ -1,0 +1,24 @@
+.cardImageCarousel{
+height: 300px;
+width: 500px;
+background-size: cover;
+
+}
+.cardImageAllMovies{
+    height: 300px;
+    width: 450px;
+    background-size: cover;
+  
+
+}
+.carousel-control-next, .carousel-control-prev {
+    margin-bottom:80px;
+}
+
+.cardTitle {
+    padding-bottom: '0px';
+}
+.carousel-control-next, .carousel-control-prev {
+
+    opacity: 1!important;
+}

@@ -1,0 +1,16 @@
+
+.carousel-control-next, .carousel-control-prev {
+    margin-bottom:80px;
+
+    opacity: 1!important;
+}
+.carousel, .slide{
+    width: 50%;
+}
+
+.carousel-indicators li {
+    background-color: black;
+}
+.carousel-control-next{
+    right: 10px;
+}

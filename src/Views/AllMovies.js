@@ -4,7 +4,7 @@ import NavBar from '../Components/Navbar';
 
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Style from '../Components/CategoriesDisplay/Carousel.module.css';
+import Style from '../Components/CategoriesDisplay/custom.module.css';
 import { CardColumns } from 'react-bootstrap';
 
 
@@ -23,9 +23,9 @@ export default function DataLoader({ match }) {
                     <section key={index}>
 
                         <CardColumns>
-                            <Card key={el.imdbID} className="card" style={{ width: '25rem', margin: '5px', height: '30rem', padding: '15px', }}>
+                            <Card key={el.imdbID} className="card" style={{ width: 'inherit', margin: '5px', padding: '15px', }}>
 
-                                <Card.Img variant="top" className={`d-block w-100.card-img-top ${Style.cardImage}`} src={el.Poster} />
+                                <Card.Img variant="top" className={`d-block w-100.card-img-top ${Style.cardImageAllMovies}`} src={el.Poster} />
                                 <Card.Body className="cardTitle">
                                     <Card.Title>{el.Title}</Card.Title>
                                     <Card.Link to="/about/" href="/about/">Rent a Movie</Card.Link>
