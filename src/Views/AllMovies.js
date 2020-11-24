@@ -1,7 +1,6 @@
 import React from 'react';
 import useFetch from '../Components/UseFetch';
 import NavBar from '../Components/Navbar';
-
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Style from '../Components/CategoriesDisplay/custom.module.css';

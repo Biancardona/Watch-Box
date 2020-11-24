@@ -4,6 +4,8 @@ import CategoriesDisplay from "../Components/CategoriesDisplay/CategoriesDisplay
 // import '../Styles/Home.css';
 import NavBar from '../Components/Navbar';
 
+import Dashboard from '../Components/SignUp.In/Login';
+
 
 const Home = () => (
 
@@ -14,22 +16,15 @@ const Home = () => (
             <NavBar> </NavBar>
         </header>
 
-
+        <div>
+            <Dashboard> </Dashboard>
+        </div>
 
         <CategoriesDisplay category={"star"} worKey="star" />
         <CategoriesDisplay category={"harry"} worKey="harry" />
         <CategoriesDisplay category={"batman"} workey="batman" />
 
-        {/* <Link key="avengers" to={`/allmovies/avengers`}>Avengers</Link><br>
-        </br>
-        <Link key="star" to={`/allmovies/star`}>Star Wars</Link><br>
-        </br>
-        <Link key="harry" to={`/allmovies/harry`}>Harry Potter</Link><br>
-        </br>
-        <Link key="disney" to={`/allmovies/disney`}>Disney</Link><br>
-        </br>
-        <Link key="lord" to={`/allmovies/lord`}>Lord Of The Rings</Link><br>
-        </br> */}
+
     </div >
 );
 
