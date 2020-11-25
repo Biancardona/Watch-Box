@@ -3,7 +3,7 @@ import { useFirebaseApp } from 'reactfire';
 import 'firebase/auth'
 
 
-const Signup = () => {
+const Register = () => {
     // User State
     const [user, setUser] = useState({
         nickname: '',
@@ -67,16 +67,46 @@ const Signup = () => {
 
     return (
         <>
-            <h1>Sign up</h1>
-            <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Nickname" name="nickname" onChange={handleChange} /><br />
-                <input type="text" placeholder="Email" name="email" onChange={handleChange} /><br />
-                <input type="password" placeholder="Password" name="password" onChange={handleChange} /><br />
-                <button type="submit">Sign Up</button>
-            </form>
+            <div className="container-fluid">
+                <div className="row main-content bg-success text-center">
+                    <div className="col-md-4 text-center company_info">
+                    </div>
+                    <div className="col-md-8 col-xs-12 col-sm-12 login_form ">
+                        <div className="container-fluid">
+                            <div className="row">
+                                <h1>Sign up</h1>
+                            </div>
+                            <div className="row">
+                                <form className="form-group" onSubmit={handleSubmit}>
+                                    <div className="row">
+
+                                        <input type="text" className="form__input" placeholder="Name" name="nickname" onChange={handleChange} />
+                                    </div>
+                                    <div className="row">
+
+                                        <input type="text" className="form__input" placeholder="Email" name="email" onChange={handleChange} />
+                                    </div>
+                                    <div className="row">
+
+                                        <input type="password" className="form__input" placeholder="Password" name="password" onChange={handleChange} />
+                                    </div>
+                                    <div className="row">
+                                        <button type="submit" className="btnSignUp btn">Sign Up</button>
+                                    </div>
+                                </form>
+                                <div className="row">
+                                    <p> Already registered <a href="/">sign in?</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             {user.error && <h4>{user.error}</h4>}
             {user.verifyEmail && <h4>{user.verifyEmail}</h4>}
         </>
     )
 };
-export default Signup;
+export default Register;

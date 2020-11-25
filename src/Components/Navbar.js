@@ -8,10 +8,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
     const history = useHistory();
-    const homeRoute = () => { history.push('/'); };
+    const homeRoute = () => { history.push('/home'); };
     const aboutUsRoute = () => {
         history.push('/about/');
     };
+    const logoutRoute = () => { history.push('/logout/') };
+
     return (
 
         <Navbar bg="light" expand="lg">
@@ -21,6 +23,7 @@ const NavBar = () => {
                 <Nav className="mr-auto">
                     <Nav.Link onClick={homeRoute} href="#home">Home</Nav.Link>
                     <Nav.Link onClick={aboutUsRoute} href="#about">About Us</Nav.Link>
+                    <Nav.Link onClick={logoutRoute} href="#logout">Logout</Nav.Link>
 
                 </Nav>
                 <SearchForm />
