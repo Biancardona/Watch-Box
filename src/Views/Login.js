@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useFirebaseApp } from 'reactfire';
+import { useHistory } from 'react-router-dom';
 import 'firebase/auth'
 
 
 const Login = () => {
+    const history = useHistory();
     // User State
     const [user, setUser] = useState({
         email: '',
@@ -26,15 +28,23 @@ const Login = () => {
     // Submit function (Log in user)
     const handleSubmit = e => {
         e.preventDefault();
+
         // Log in code here.
         firebase.auth().signInWithEmailAndPassword(user.email, user.password)
+
             .then(result => {
-                if (!result.user.emailVerified) {
+                if (result.user.emailVerified) {
+                    history.push('/home/');
+                } else {
+                    (!result.user.emailVerified)
+
                     setUser({
+
                         ...user,
                         error: 'Please verify your email before to continue',
                     })
                     firebase.auth().signOut();
+
                 }
             })
             .catch(error => {

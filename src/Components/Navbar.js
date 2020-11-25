@@ -4,15 +4,23 @@ import Navbar from 'react-bootstrap/Navbar';
 import SearchForm from './SearchForm';
 import { Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useFirebaseApp } from 'reactfire';
+import 'firebase/auth'
 
 
 const NavBar = () => {
     const history = useHistory();
     const homeRoute = () => { history.push('/home'); };
-    const aboutUsRoute = () => {
-        history.push('/about/');
-    };
+    const aboutUsRoute = () => { history.push('/about/'); };
     const logoutRoute = () => { history.push('/logout/') };
+
+    // Import firebase
+    const firebase = useFirebaseApp();
+
+    // Log out function
+    const handleClick = () => {
+        firebase.auth().signOut();
+    }
 
     return (
 
@@ -23,7 +31,7 @@ const NavBar = () => {
                 <Nav className="mr-auto">
                     <Nav.Link onClick={homeRoute} href="#home">Home</Nav.Link>
                     <Nav.Link onClick={aboutUsRoute} href="#about">About Us</Nav.Link>
-                    <Nav.Link onClick={logoutRoute} href="#logout">Logout</Nav.Link>
+                    <Nav.Link onClick={logoutRoute, handleClick} href="/">Logout</Nav.Link>
 
                 </Nav>
                 <SearchForm />

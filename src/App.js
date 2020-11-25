@@ -8,6 +8,7 @@ import Login from './Views/Login';
 import MovieDetail from './Views/MovieDetail';
 import Register from './Views/Register';
 
+
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/allmovies/:id" component={AllMovies} />
         <Route path="/about/" component={AboutUs} />
         <Route path="/register/" component={Register} />
+        <Route path="/logout/" component={Login} />
         <Route path="/moviedetail/:id" component={MovieDetail} />
       </Switch>
 

@@ -3,7 +3,10 @@ import { useFirebaseApp } from 'reactfire';
 import 'firebase/auth'
 
 
+
 const Register = () => {
+
+
     // User State
     const [user, setUser] = useState({
         nickname: '',
@@ -24,6 +27,7 @@ const Register = () => {
 
     // Import firebase
     const firebase = useFirebaseApp();
+
 
     // Submit function (Create account)
     const handleSubmit = e => {
@@ -67,40 +71,45 @@ const Register = () => {
 
     return (
         <>
-            <div className="container-fluid">
-                <div className="row main-content bg-success text-center">
-                    <div className="col-md-4 text-center company_info">
-                    </div>
-                    <div className="col-md-8 col-xs-12 col-sm-12 login_form ">
-                        <div className="container-fluid">
-                            <div className="row">
-                                <h1>Sign up</h1>
-                            </div>
-                            <div className="row">
-                                <form className="form-group" onSubmit={handleSubmit}>
-                                    <div className="row">
+            <div>
 
-                                        <input type="text" className="form__input" placeholder="Name" name="nickname" onChange={handleChange} />
-                                    </div>
-                                    <div className="row">
 
-                                        <input type="text" className="form__input" placeholder="Email" name="email" onChange={handleChange} />
-                                    </div>
-                                    <div className="row">
-
-                                        <input type="password" className="form__input" placeholder="Password" name="password" onChange={handleChange} />
-                                    </div>
-                                    <div className="row">
-                                        <button type="submit" className="btnSignUp btn">Sign Up</button>
-                                    </div>
-                                </form>
+                <div className="container-fluid">
+                    <div className="row main-content bg-success text-center">
+                        <div className="col-md-4 text-center company_info">
+                        </div>
+                        <div className="col-md-8 col-xs-12 col-sm-12 login_form ">
+                            <div className="container-fluid">
                                 <div className="row">
-                                    <p> Already registered <a href="/">sign in?</a>
-                                    </p>
+                                    <h1>Sign up</h1>
+                                </div>
+                                <div className="row">
+                                    <form className="form-group" onSubmit={handleSubmit}>
+                                        <div className="row">
+
+                                            <input type="text" className="form__input" placeholder="Name" name="nickname" onChange={handleChange} />
+                                        </div>
+                                        <div className="row">
+
+                                            <input type="text" className="form__input" placeholder="Email" name="email" onChange={handleChange} />
+                                        </div>
+                                        <div className="row">
+
+                                            <input type="password" className="form__input" placeholder="Password" name="password" onChange={handleChange} />
+                                        </div>
+                                        <div className="row">
+                                            <button type="submit" className="btnSignUp btn">Sign Up</button>
+                                        </div>
+                                    </form>
+                                    <div className="row">
+                                        <p> Already registered <a href="/">sign in?</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
             </div>

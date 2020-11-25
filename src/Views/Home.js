@@ -5,7 +5,7 @@ import CategoriesDisplay from "../Components/CategoriesDisplay/CategoriesDisplay
 import NavBar from '../Components/Navbar';
 
 import { useUser } from 'reactfire';
-import Logout from './Logout';
+
 
 
 
@@ -13,36 +13,29 @@ import Logout from './Logout';
 const Home = () => {
     const user = useUser();
     return (
+        <div>
+            {
+                user &&
+                <div className="columns is-multiline">
+                    <div className="column"></div>
 
-        <div className="columns is-multiline">
+                    <header>
+                        <NavBar> </NavBar>
+                    </header>
 
-            <div className="column"></div>
+                    <div>
+                        Welcome {user.displayName}
+                    </div>
 
-
-            <header>
-                <NavBar> </NavBar>
-
-                <div>
-                    {
-                        user &&
-                        <Logout />
-                    }
-                    {
-                        !user &&
-                        <>
-
-                            <div> Hola crayola este es Home </div>
-                        </>
-                    }
-                </div>
-            </header>
-
-            <CategoriesDisplay category={"star"} worKey="star" />
-            <CategoriesDisplay category={"harry"} worKey="harry" />
-            <CategoriesDisplay category={"batman"} workey="batman" />
+                    <CategoriesDisplay category={"star"} worKey="star" />
+                    <CategoriesDisplay category={"harry"} worKey="harry" />
+                    <CategoriesDisplay category={"batman"} workey="batman" />
 
 
-        </div >
+                </div >
+            }
+
+        </div>
     );
 }
 
